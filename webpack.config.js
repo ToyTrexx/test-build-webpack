@@ -8,6 +8,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'index.[contenthash:8].js',
+        assetModuleFilename: path.join('images', '[name].[contenthash:8][ext]'),
     },
     module: {
         rules: [
@@ -28,6 +29,17 @@ module.exports = {
                     'postcss-loader',
                     'sass-loader'],
             },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+            {
+                test: /\.svg$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: path.join('icons', '[name].[contenthash:8][ext]'),
+                },
+            },
         ],
     },
     plugins: [
@@ -43,7 +55,7 @@ module.exports = {
             },
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css',
+            filename: '[name].[contenthash:8].css',
         }),
     ],
     devServer: {
