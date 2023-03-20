@@ -1,17 +1,14 @@
 doctype html
-head
-    meta(charset='UTF-8')
-    meta(http-equiv='X-UA-Compatible' content='IE=edge')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title Fast start Webpack
-body   
-    p File compiled with preprocessor Pug
-    .logo-png
-        img.logo1(src=require('./images/image.png') alt='Download PNG - pictures with Webpack')
-    .logo-svg
-        img.logo2(src=require('./images/logo.svg')  alt='Download SVG - pictures with Webpack')
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Fast start Webpack
+    body   
+        p File compiled with preprocessor Pug
+        .logo-png
+            img.logo1(src=require('./images/image.png') alt='Download PNG - pictures with Webpack')
+        .logo-svg
+            img.logo2(src=require('./images/logo.svg')  alt='Download SVG - pictures with Webpack')   
 
-    :markdown-it(linkify langPrefix='highlight-')
-    ## Markdown документ
-
-    - Написано на **Markdown**    
