@@ -25,6 +25,7 @@
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
+    "jstransformer-markdown-it": "^3.0.0",
     "mini-css-extract-plugin": "^2.7.5",
     "postcss-loader": "^7.1.0",
     "postcss-preset-env": "^8.0.1",
