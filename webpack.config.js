@@ -41,6 +41,10 @@ module.exports = {
                     filename: path.join('icons', '[name].[contenthash:8][ext]'),
                 },
             },
+            {
+                test: /\.(woff2?|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+            }
         ],
     },
     plugins: [
